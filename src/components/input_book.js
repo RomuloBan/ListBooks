@@ -1,12 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 
-const InputBook = ({ onClickSave }) => {
+const InputBook = ({ dispatch }) => {
 
 	let input;
 
 	const clickHandler = () => {
-		if(input.value) onClickSave({ type: 'ADD_BOOK', title: input.value });
+		if(input.value) dispatch({ type: 'ADD_BOOK', title: input.value });
 		
 		input.value = '';
 	};
@@ -20,4 +21,4 @@ const InputBook = ({ onClickSave }) => {
 }
 
 
-export default InputBook;
+export default connect()(InputBook);
