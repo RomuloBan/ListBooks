@@ -3,6 +3,7 @@ export default function () {
 		{title: 'JavaScript: The Good Parts'},
 		{title: 'Silmarillon'},
 		{title: 'Snowcrash'},
-		{title: 'Retromania'}
+		{title: 'Retromania'},
+		{title: 'Interactive Programming'}
 	];
 }
