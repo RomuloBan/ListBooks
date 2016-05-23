@@ -3,14 +3,16 @@ import { connect } from 'react-redux';
 
 class BookList extends Component {
 
-	render() {
-
-		return (<ul>
-			{this.props.books.map( book => {
+	renderList() {
+		return this.props.books.map( book => {
 				return <li  key={book.title} >{book.title}</li>
-			})}
-		</ul>);
-		
+		});
+	}
+
+	render() {
+		return (<ul>
+				{this.renderList()}
+				</ul>);		
 	}
 
 }
