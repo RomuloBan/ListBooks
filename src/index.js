@@ -11,12 +11,9 @@ import reducers from './reducers';
 var store = createStore(reducers);
 
 
-const dispatchAction = (action) => {
-	store.dispatch(action);
-}
 
 ReactDOM.render(
   <Provider store={store}>
-    <App onDispatchAction={dispatchAction}/>
+    <App />
   </Provider>
   , document.querySelector('.container'));
